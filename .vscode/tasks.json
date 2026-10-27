@@ -1,0 +1,7 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "Laboratorio: iniciar Tomcat", "type": "shell", "command": "powershell", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/iniciar.ps1"], "problemMatcher": [], "group": {"kind": "build", "isDefault": true}},
+    {"label": "Laboratorio: detener Tomcat", "type": "shell", "command": "powershell", "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/scripts/detener.ps1"], "problemMatcher": []}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "resultado": "OK",
+  "http": 200,
+  "registros": 5,
+  "activosIniciales": 3,
+  "inactivosIniciales": 2,
+  "estadoPreservadoEnDosPostbacks": true,
+  "listaVacia": true,
+  "restauracion": true,
+  "responsive": true,
+  "erroresJavaScript": []
+}

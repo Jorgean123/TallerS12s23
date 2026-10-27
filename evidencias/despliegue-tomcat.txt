@@ -1,0 +1,30 @@
+﻿
+oct. 27, 2026 11:25:44 A. M. org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMACIÓN: La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\jorge.acosta\.codex\tmp\arg0-windows\codex-arg0Fxs7Or;C:\Program Files\Eclipse Adoptium\jdk-25.0.2.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-11;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\pgmodeler;C:\Users\ronaldo.barzola\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Microsoft SQL Server\170\DTS\Binn\;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Appeon\PowerBuilder 22.0;C:\Program Files (x86)\Appeon\PowerBuilderUtilities 22.0;C:\Users\jorge.acosta\.local\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;c:\Users\jorge.acosta\AppData\Local\Programs\cursor\resources\app\codeBin;C:\Users\jorge.acosta\AppData\Local\Microsoft\WindowsApps;C:\Users\jorge.acosta\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jorge.acosta\.dotnet\tools;C:\Users\jorge.acosta\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\jorge.acosta\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;c:\Users\jorge.acosta\.vscode\extensions\openai.chatgpt-26.51021.22027-win32-x64\bin\windows-x86_64;.]
+oct. 27, 2026 11:25:44 A. M. org.apache.coyote.AbstractProtocol init
+INFORMACIÓN: Inicializando el manejador de protocolo ["http-nio-127.0.0.1-8088"]
+
+oct. 27, 2026 11:25:44 A. M. org.apache.catalina.startup.Catalina load
+INFORMACIÓN: Server initialization in [379] milliseconds
+oct. 27, 2026 11:25:44 A. M. org.apache.catalina.core.StandardService startInternal
+INFORMACIÓN: Arrancando servicio [Catalina]
+oct. 27, 2026 11:25:44 A. M. org.apache.catalina.core.StandardEngine startInternal
+INFORMACIÓN: Starting Servlet engine: [Apache Tomcat/9.0.123]
+oct. 27, 2026 11:25:44 A. M. org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Despliegue del archivo [C:\WebIntegradoUTP\TallerS12s23\.runtime\apache-tomcat-9.0.123\webapps\taller-s12s23.war] de la aplicación web
+oct. 27, 2026 11:25:44 A. M. org.apache.catalina.startup.ExpandWar expand
+INFORMACIÓN: An expanded directory [C:\WebIntegradoUTP\TallerS12s23\.runtime\apache-tomcat-9.0.123\webapps\taller-s12s23] was found with a last modified time that did not match the associated WAR. It will be deleted.
+oct. 27, 2026 11:25:45 A. M. org.apache.jasper.servlet.TldScanner scanJars
+INFORMACIÓN: Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+oct. 27, 2026 11:25:45 A. M. com.sun.faces.config.ConfigureListener contextInitialized
+INFORMACIÓN: Inicializando Mojarra 2.2.20 ( 20190731-0756 59754ac80c05d61848a08939ddd11a324f2345ac) para el contexto '/taller-s12s23'
+oct. 27, 2026 11:25:45 A. M. com.sun.faces.spi.InjectionProviderFactory createInstance
+INFORMACIÓN: JSF1048: hay presentes anotaciones PostConstruct/PreDestroy.  Los métodos de beans administrados marcados con estas anotaciones procesarán dichas anotaciones.
+oct. 27, 2026 11:25:45 A. M. org.apache.catalina.startup.HostConfig deployWAR
+INFORMACIÓN: Deployment of web application archive [C:\WebIntegradoUTP\TallerS12s23\.runtime\apache-tomcat-9.0.123\webapps\taller-s12s23.war] has finished in [1.268] ms
+oct. 27, 2026 11:25:45 A. M. org.apache.coyote.AbstractProtocol start
+INFORMACIÓN: Starting ProtocolHandler ["http-nio-127.0.0.1-8088"]
+oct. 27, 2026 11:25:45 A. M. org.apache.catalina.startup.Catalina start
+INFORMACIÓN: Server startup in [1332] milliseconds
+oct. 27, 2026 11:25:47 A. M. com.sun.faces.application.view.ViewScopeManager <init>
+INFORMACIÓN: CDI @ViewScoped bean functionality unavailable

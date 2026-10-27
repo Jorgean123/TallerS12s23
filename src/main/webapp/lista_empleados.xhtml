@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core" lang="es">
+<h:head>
+    <title>Gestión de empleados | UTP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <h:outputStylesheet library="css" name="estilos.css" />
+</h:head>
+<h:body>
+    <header><div class="brand">UTP <span>PORTAL CORPORATIVO</span></div><span>Gestión del talento</span></header>
+    <main>
+        <div class="eyebrow">RECURSOS HUMANOS / DIRECTORIO</div>
+        <h1>Gestión de empleados</h1>
+        <p class="intro">Consulta el equipo y administra su estado laboral en un solo lugar.</p>
+        <h:form id="empleadosForm">
+            <h:panelGroup id="contenido" layout="block">
+                <section class="metrics" aria-label="Resumen de empleados">
+                    <article><span>Total de empleados</span><strong id="total">#{empleadoController.listaEmpleados.size()}</strong></article>
+                    <article><span>Activos</span><strong id="activos">#{empleadoController.totalActivos}</strong></article>
+                    <article><span>Inactivos</span><strong id="inactivos">#{empleadoController.listaEmpleados.size() - empleadoController.totalActivos}</strong></article>
+                </section>
+                <section class="card">
+                    <div class="toolbar"><div><h2>Directorio del equipo</h2><p>Información de personal · Importes en soles</p></div>
+                        <div class="actions">
+                            <h:commandButton value="Vaciar lista" action="#{empleadoController.vaciarLista}" styleClass="button secondary" disabled="#{empty empleadoController.listaEmpleados}"><f:ajax execute="@this" render="contenido" /></h:commandButton>
+                            <h:commandButton value="Restaurar datos" action="#{empleadoController.restaurarDatos}" styleClass="button"><f:ajax execute="@this" render="contenido" /></h:commandButton>
+                        </div>
+                    </div>
+                    <h:panelGroup layout="block" styleClass="empty" rendered="#{empty empleadoController.listaEmpleados}">
+                        <h3>No hay empleados registrados</h3><p>La lista está vacía. Usa «Restaurar datos» para cargar los cinco registros de prueba.</p>
+                    </h:panelGroup>
+                    <div class="table-scroll">
+                        <h:dataTable id="tabla" value="#{empleadoController.listaEmpleados}" var="emp" styleClass="employees" rendered="#{not empty empleadoController.listaEmpleados}">
+                            <h:column><f:facet name="header">ID</f:facet><h:outputText value="#{emp.id}" /></h:column>
+                            <h:column><f:facet name="header">Nombre</f:facet><h:outputText value="#{emp.nombre}" styleClass="name" /></h:column>
+                            <h:column><f:facet name="header">Cargo</f:facet><h:outputText value="#{emp.cargo}" /></h:column>
+                            <h:column><f:facet name="header">Sueldo</f:facet><h:outputText value="#{emp.sueldo}"><f:convertNumber type="currency" currencySymbol="S/ " locale="es_PE" minFractionDigits="2" /></h:outputText></h:column>
+                            <h:column><f:facet name="header">Estado</f:facet><h:outputText value="#{emp.activo ? 'Activo' : 'Inactivo'}" styleClass="badge #{emp.activo ? 'active' : 'inactive'}" /></h:column>
+                            <h:column><f:facet name="header">Acción</f:facet><h:commandButton value="#{emp.activo ? 'Desactivar' : 'Activar'}" action="#{empleadoController.cambiarEstado(emp)}" styleClass="text-button"><f:ajax execute="@this" render=":empleadosForm:contenido" /></h:commandButton></h:column>
+                        </h:dataTable>
+                    </div>
+                    <div class="table-footer"><h:outputText styleClass="record-count" value="#{empleadoController.listaEmpleados.size()} registros" /><h:outputText styleClass="activity-summary" value="Hay personal activo" rendered="#{not empty empleadoController.listaEmpleados and empleadoController.totalActivos gt 0}" /></div>
+                </section>
+            </h:panelGroup>
+        </h:form>
+        <footer>Laboratorio · Semana 12 / Sesión 23 <span>JavaServer Faces · Expression Language · MVC</span></footer>
+    </main>
+</h:body>
+</html>
+
